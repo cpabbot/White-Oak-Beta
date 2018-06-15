@@ -1,0 +1,13 @@
+<section class="welcome">
+    <!-- stuff -->
+    
+    <div class="credit">
+        <span class="credit-text">Site created by Cameron Abbot</span>
+    </div>
+</section>
+
+
+<section class="other">
+    
+    <input type=button class="upload-btn" value="Upload multiple images">
+</section>

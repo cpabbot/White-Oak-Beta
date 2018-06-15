@@ -1,0 +1,58 @@
+
+
+.filter {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(45,45,45,0);
+}
+
+.text {
+    
+    left: 0;
+    top: 40vh;
+    z-index: -1
+}
+
+.text p {
+    color: black;
+}
+
+/**.welcome {
+    width: 100%;
+    height: 100vh;
+    background-color: darkred;
+}**/
+
+.other {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.credit {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vw;
+}
+
+.credit-text {
+    font: 700 1.3em 'Montserrat', sans-serif;
+    color: white;
+}
+
+.cloudinary-button {
+    font: 700 1.5em 'Montserrat', sans-serif !important;
+    color: #444 !important;
+    background: none !important;
+}
+
+.cloudinary-button:hover {
+    color: darkred !important;
+}
+
+.first {
+    width: 100%;
+    height: 130vh;
+    background-color: aquamarine;
+}
