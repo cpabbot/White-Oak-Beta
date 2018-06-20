@@ -4,14 +4,14 @@ credit: https://codepen.io/Hackroro/pen/ByrKLZ
 **************************/
 
 .sun { 
-  position: fixed;
-	top: 10vh;
+    position: fixed;
+	top: 11vh;
 	left: 10vw;
 	right:0;
 	bottom:0;
 	width:100px;
 	height:100px;
-	border-radius:50%;	
+	border-radius:50%;
 	background:white;
 	opacity:0.9;			
 	box-shadow: 0px 0px 40px 15px white;

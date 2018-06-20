@@ -21,10 +21,10 @@
 <body>
 
 <main class="main">
-<div class="filter"></div>
+<!--<div class="filter"></div>-->
 <img src="img/tree.svg" class="tree-background">
     
-<section class="section welcome">
+<section class="section welcome first">
     <div class="sun">
         <div class="ray_box">
             <div class="ray ray1"></div>
@@ -40,17 +40,57 @@
         </div>
     </div>
     <h1 class="title">White Oak</h1>
+    <!-- adopted from Naoya https://codepen.io/nxworld/pen/OyRrGy -->
+    <div class="scroll-1__container">
+        <a href="#" class="scroll-1 scroll-1--dark" onclick="scrollDown()">
+            <div class="scroll-1__circle scroll-1__circle--dark"></div><span class="scroll-1__arrow scroll-1__arrow--dark"></span>Scroll
+        </a>
+    </div>
 </section>
 
 <section class="section second">
+    <div class="section-background sb--second"></div>
+    
+    <video class="brewerton-mp4" id="brewerton-mp4">
+        <source src="img/brewerton.webm" type="video/webm">
+        <source src="img/brewerton.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+    
+    <div class="scroll-1__container">
+        <a href="#" class="scroll-1 scroll-1--light" onclick="scrollDown()">
+            <div class="scroll-1__circle scroll-1__circle--light"></div><span class="scroll-1__arrow scroll-1__arrow--light"></span>Scroll
+        </a>
+    </div>
     
 </section>
     
 <section class="section third">
+    <div class="section-background sb--third"></div>
     
+    <div class="scroll-1__container">
+        <a href="#" class="scroll-1 scroll-1--light" onclick="scrollDown()">
+            <div class="scroll-1__circle scroll-1__circle--light"></div><span class="scroll-1__arrow scroll-1__arrow--light"></span>Scroll
+        </a>
+    </div>
 </section>
     
 <section class="section fourth">
+    <div class="section-background sb--fourth"></div>
+    
+    <div class="scroll-1__container">
+        <a href="#" class="scroll-1 scroll-1--light" onclick="scrollDown()">
+            <div class="scroll-1__circle scroll-1__circle--light"></div><span class="scroll-1__arrow scroll-1__arrow--light"></span>See our roots
+        </a>
+    </div>
+</section>
+    
+<section class="spacer">
+    <div class="section-background sb--spacer"></div>
+</section>
+    
+<section class="section last">
+    <div class="section-background sb--last"></div>
     
 </section>
 
