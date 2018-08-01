@@ -12,9 +12,9 @@ credit: https://codepen.io/Hackroro/pen/ByrKLZ
 	width:100px;
 	height:100px;
 	border-radius:50%;
-	background:white;
+	background:#ffe;
 	opacity:0.9;			
-	box-shadow: 0px 0px 40px 15px white;
+	box-shadow: 0px 0px 40px 15px #ffe;
 }
 
 .ray_box {

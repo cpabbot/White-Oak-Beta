@@ -5,7 +5,10 @@ var scrollY = 0;
 var lastScrollY = 0;
 var page = 0;
 var sunY = $(".sun").offset().top;
+var cloudLeftY = $(".cloud-btn--left").offset().top;
+var cloudRightY = $(".cloud-btn--right").offset().top;
 var video = document.getElementById('brewerton-mp4');
+var videoPage = 1;
 
 $(document).ready(function() {
     
@@ -26,6 +29,8 @@ function animate() {
 //    window.requestAnimationFrame(parallaxFixed($(".tree-background"), 0.3));
     parallaxFixed($(".tree-background"), 0.3, 0);
     parallaxFixed($(".sun"), 0.05, sunY);
+//    parallaxFixed($(".cloud-btn--left"), 0.3, cloudLeftY);
+//    parallaxFixed($(".cloud-btn--right"), 0.3, cloudRightY);
 }
 
 function parallaxFixed($el, amount, offset) {
@@ -43,7 +48,7 @@ function parallaxAbsolute() {
 function checkScroll() {
     if(!isScrolling) {
             scrollY = main.scrollTop();
-            //alert(scrollY + " " + lastScrollY);
+//            alert(scrollY + " " + lastScrollY);
             if(scrollY > lastScrollY) { // scroll down
                 scrollDown();
             }
@@ -56,31 +61,40 @@ function checkScroll() {
 function scrollDown() {
     if(page == 3) { page += 6; }
     else { page++; }
-    isScrolling = true;
+//    isScrolling = true;
     scrollToPage(page);
 }
 
 function scrollUp() {
     if(page == 9) { page -= 6; }
     else { page--; }
-    isScrolling = true;
+//    isScrolling = true;
     scrollToPage(page);
 }
 
-function scrollToPage(page) {
-    var newYPos = Math.round(vHeight * page);
-//    alert(main.scrollTop() + "  to   " + newYPos + " (" + page + ")");
-    prepareBrewertonAnimation();
-    
-    main.animate({
-        scrollTop: newYPos
-    }, 1000, function() {
-        pageLanded(page);
-        setTimeout(function() {
-            isScrolling = false
-        }, 50);
-    });
-    lastScrollY = newYPos;
+function scrollToPage(thePage) {
+    if(!isScrolling) {
+        page = thePage;
+        isScrolling = true; // needed for dots which calls this function directly
+        $(".dot").removeClass("dot--current");
+        var dotNum = page + 1;
+        if(page == 9) { dotNum = 5 }
+        $(".nav-dots ul li:nth-child(" + dotNum + ") .dot").addClass("dot--current");
+
+        var newYPos = Math.round(vHeight * page);
+    //    alert(main.scrollTop() + "  to   " + newYPos + " (" + page + ")");
+        prepareBrewertonAnimation();
+
+        main.animate({
+            scrollTop: newYPos
+        }, 900, function() {
+            pageLanded(page);
+            setTimeout(function() {
+                isScrolling = false
+            }, 50);
+        });
+        lastScrollY = newYPos;
+    }
 }
 
 function getDist() {
@@ -88,25 +102,38 @@ function getDist() {
 }
 
 function pageLanded(page) {
-    if(page == 0) {
-        video.pause();
-        video.currentTime = 0;
-        video.load();
+    if(page == videoPage-1) {
+        resetVideo();
+        setTimeout(function() {
+            $(".about-1").addClass("fadeUp");
+        }, 0);
+        setTimeout(function() {
+            $(".about-2").addClass("fadeUp");
+        }, 1000);
     }
-//    if(page == 1) {
-//        video.play();
-//    }
-    if(page == 2) {
-        video.pause();
-        video.currentTime = 0;
-        video.load();
+    if(page == videoPage+1) {
+        resetVideo();
+    }
+    if(page == 1) {
+        $(".mission-title").addClass("fadeIn");
+        setTimeout(function() { $(".mission").addClass("fadeIn"); }, 700);
+    }
+    if(page == 9) {
+        $(".team").addClass("fadeIn");
+//        setTimeout(function() { $(".mission").addClass("fadeIn"); }, 700);
     }
 }
 
 function prepareBrewertonAnimation() {
-    if(page == 1) {
+    if(page == videoPage) {
         setTimeout(function() {
             video.play();
-        }, 200);
+        }, 500);
     }
+}
+
+function resetVideo() {
+    video.pause();
+    video.currentTime = 0;
+    video.load();
 }
