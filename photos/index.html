@@ -5,7 +5,6 @@
     
     <!-- css references -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/photos.css">
     
     <!-- fonts -->
@@ -21,33 +20,46 @@
 <body>
 
 
+    
+    
+
 <main class="photos-main">
     
-    <label class="btn upload-txt">
-        Upload image
-        <input type="file" class="upload-input">
-    </label>
-    <button type="button" onclick="uploadFile()" class="btn btn--upload upload-submit">Submit</button>
+    <section class="photos-container">
+        
+    </section>
     
+    <div class="upload-btn-container">
+        <a href="#" id="upload_widget_opener" class="btn upload-btn">Upload YOUR Tree Pics!</a>
+    </div>
 </main>
+
+    
 
 
 <!-- js, jquery references -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    
+    <!-- firebase, firestore -->
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
-    <script>    
-    // Initialize Firebase
+    <script>       
     firebase.initializeApp({
         apiKey: "AIzaSyAfCEXbP5KwmHJAAWzgj7TSSQNNVrgOYv0",
         authDomain: "white-oak-project.firebaseapp.com",
         databaseURL: "https://white-oak-project.firebaseio.com",
         projectId: "white-oak-project"
     });
+        
+    const firestore = firebase.firestore();
+    const settings = {timestampsInSnapshots: true};
+    firestore.settings(settings);
   </script>
+    
     <script src="../js/upload.js"></script>
-<!--    <script src="../js/data.js"></script>-->
+    <script src="../js/retrieve.js"></script>
     
 </body>
-<!-- Created by Cameron Abbot -->
+<!-- Site created by Cameron Abbot -->
 </html>
