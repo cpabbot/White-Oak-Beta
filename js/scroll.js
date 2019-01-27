@@ -25,6 +25,11 @@ $(document).ready(function() {
     
 });
 
+$(window).on('resize', function() {
+     vHeight = $(window).height();
+//    alert("resize " + vHeight);
+});
+
 function animate() {
 //    window.requestAnimationFrame(parallaxFixed($(".tree-background"), 0.3));
     parallaxFixed($(".tree-background"), 0.3, 0);

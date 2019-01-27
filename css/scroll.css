@@ -3,7 +3,7 @@
 /** for centering the scroll down button **/
 .scroll-1__container {
     position: absolute;
-    bottom: 0; /* make this negative to lower the button */
+    bottom: -30px; /* make this negative to lower the button */
     height: 0px;
     width: 100%;
     text-align: center;
@@ -21,13 +21,8 @@
     letter-spacing: .1em;
     text-decoration: none;
     padding-top: 60px;
-}
-
-.scroll-1--dark {
-    color: #333;
-}
-.scroll-1--light {
-    color: #fff;
+    /* mobile: hidden "scroll" */
+    color: rgba(0,0,0,0);
 }
 
 /** circle **/
@@ -54,10 +49,22 @@
     border-color: #fff;
 }
 
-.scroll-1__circle:hover {
-    border-radius: 2px;
-    transform: rotate(135deg);
-/*    transition: transform 0.8s, border-radius 0.5s;*/
+/* desktop only: scroll down button animation */
+@media (min-width: 500px) {
+    .scroll-1__circle:hover {
+        border-radius: 2px;
+        transform: rotate(135deg);
+    /*    transition: transform 0.8s, border-radius 0.5s;*/
+    }
+    .scroll-1__container {
+        bottom: 0;
+    }
+    .scroll-1--dark {
+        color: #333;
+    }
+    .scroll-1--light {
+        color: #fff;    
+    }
 }
 
 /** the circle part, replaced by other div in order to allow rotation **/

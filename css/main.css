@@ -60,6 +60,19 @@ body, html {
     outline: none;
 }
 
+.flex-center {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.gradient-color {
+    background: -webkit-linear-gradient(#aaa, #167AF1, #442200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .main::-webkit-scrollbar {
  display: none;
 }

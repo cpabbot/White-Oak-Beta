@@ -1,11 +1,11 @@
 $(document).ready(function() {
     
-    $(".contact").click(function() {
-        $(".contact__img").not($(this).children(".contact__img")).removeClass("js-contact__img--info");
-        $(".contact__name").not($(this).children(".contact__name")).removeClass("js-contact__name--info");
-        $(this).children(".contact__img").toggleClass("js-contact__img--info");
-        $(this).children(".contact__name").toggleClass("js-contact__name--info");
-    });
+//    $(".team").click(function() {
+//        $(".team__img").not($(this).children(".team__img")).removeClass("js-team__img--info");
+//        $(".team__team").not($(this).children(".team__team")).removeClass("js-team__team--info");
+//        $(this).children(".team__img").toggleClass("js-team__img--info");
+//        $(this).children(".team__team").toggleClass("js-team__team--info");
+//    });
     
 //    $(".dot").click(function() {
 //        $(".dot").removeClass("dot--current");

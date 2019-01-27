@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Righteous|Song+Myung" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quattrocento:400,700" rel="stylesheet">
 
+    <!-- favicon -->
+    <link href="/img/icons/favicon.ico" rel="icon" type="image/x-icon" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> White Oak (beta) </title>
@@ -101,7 +103,10 @@
 <section class="section third" id="third">
     <div class="section-background sb--third"></div>
     
-    
+    <div class="medium-window">
+        <iframe src="resources/" class="frame resources-frame"></iframe>
+        <a><h1 class="subtitle">View Resources</h1></a>
+    </div>
     
 <!--
     <div class="about-test">
@@ -124,6 +129,11 @@ will be a significant presence of White Oak trees along New York canals</div>
 <section class="section fourth" id="fourth">
     <div class="section-background sb--fourth"></div>
     
+    <div class="medium-window">
+        <iframe src="photos/" class="frame photos-frame"></iframe>
+        <a><h1 class="subtitle">View Photos</h1></a>
+    </div>
+    
     <div class="scroll-1__container">
         <a href="#" class="scroll-1 scroll-1--light" onclick="scrollDown()">
             <div class="scroll-1__circle scroll-1__circle--light"></div><span class="scroll-1__arrow scroll-1__arrow--light"></span>See our roots
@@ -142,33 +152,39 @@ will be a significant presence of White Oak trees along New York canals</div>
     
     <div class="team-container">
         <div class="team">
-            <img src="img/people/cameronabbot.jpeg" class="team__img">
-            <span class="team__name">Cameron Abbot</span>
-            <a><span class="team__info">camerona@whiteoakproject.org</span></a>
+            <img src="img/people/georgepauk.jpeg" class="team__img">
+            <div class="team__description">
+                <div class="hr"></div>
+                <span class="team__name gradient-color">George Pauk</span>
+                <a><span class="team__info">georgep@whiteoakproject.org</span></a>
+            </div>
         </div>
-
+        
+        <div class="team">
+            <img src="img/people/jenniferturnermiller.jpeg" class="team__img">
+            <div class="team__description">
+                <div class="hr"></div>
+                <span class="team__name gradient-color">Jennifer Turner-Miller</span>
+                <a><span class="team__info">jennifert@whiteoakproject.org</span></a>
+            </div>
+        </div>
+        
         <div class="team">
             <img src="img/people/sewardford.png" class="team__img">
-            <span class="team__name">Seward Ford</span>
-            <a><span class="team__info">sewardf@whiteoakproject.org</span></a>
+            <div class="team__description">
+                <div class="hr"></div>
+                <span class="team__name gradient-color">Seward Ford</span>
+                <a><span class="team__info">sewardf@whiteoakproject.org</span></a>
+            </div>
         </div>
         
         <div class="team">
             <img src="img/people/cameronabbot.jpeg" class="team__img">
-            <span class="team__name">Cameron Abbot</span>
-            <a><span class="team__info">camerona@whiteoakproject.org</span></a>
-        </div>
-
-        <div class="team">
-            <img src="img/people/sewardford.png" class="team__img">
-            <span class="team__name">Seward Ford</span>
-            <a><span class="team__info">sewardf@whiteoakproject.org</span></a>
-        </div>
-
-        <div class="team">
-            <img src="img/people/sewardford.png" class="team__img">
-            <span class="team__name">Seward Ford</span>
-            <a><span class="team__info">sewardf@whiteoakproject.org</span></a>
+            <div class="team__description">
+                <div class="hr"></div>
+                <span class="team__name gradient-color">Cameron Abbot</span>
+                <a><span class="team__info">camerona@whiteoakproject.org</span></a>
+            </div>
         </div>
     </div>
     
@@ -178,10 +194,12 @@ will be a significant presence of White Oak trees along New York canals</div>
         
         <form action="https://formspree.io/whiteoakprojectmail@gmail.com" method="POST">
 <!--            target="contact-frame" onclick="sendMail()"-->
-            <input type="text" name="name" placeholder="name" class="input input--contact">
-            <input type="email" name="email" placeholder="email" class="input input--contact">
-            <input type="text" name="message" placeholder="message" class="input input--contact">
-            <input type="submit" value="send" class="input input--contact">
+            <div class="flex-center contact-1">
+                <input type="text" name="name" placeholder="name" class="input input--contact contact_e">
+                <input type="email" name="email" placeholder="email" class="input input--contact contact_e">
+            </div>
+            <textarea type="text" name="message" placeholder="message" class="input input--contact contact_e"></textarea><br>
+            <input name="submit" type="image" src="img/icons/send.svg" class="contact-submit contact_e">
         </form>
         
         
@@ -223,9 +241,12 @@ will be a significant presence of White Oak trees along New York canals</div>
 </section>
     
     
-<div class="credit">
+<!--div class="credit">
+    <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    
+    
     <span class="credit__text"><a href="http://cameronabbot.ml" class="credit__link" target="_blank">Site created by Cameron Abbot</a></span>
-</div>
+</div-->
 </main>
 
 

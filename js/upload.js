@@ -1,14 +1,13 @@
 var fileRef;
 
 document.getElementById("upload_widget_opener").addEventListener("click", function() {
-    cloudinary.openUploadWidget({ cloud_name: 'whiteoakproject', upload_preset: 'whiteoakprojectpreset', folder: 'tree registry', stylesheet: 'http://cameronabbot.ml/white-oak/css/upload-theme.css'}, 
+    cloudinary.openUploadWidget({ cloud_name: 'whiteoakproject', upload_preset: 'whiteoakprojectpreset', folder: 'tree registry', stylesheet: 'http://127.0.0.1:65289/css/upload-theme.css'}, 
       function(error, data) {
 //        console.log("file uploaded successfully", error, data);
 //        console.log(data.secure_url);
 //        console.log(data.0);
         
 //        http://cameronabbot.ml/white-oak/css/upload-theme.css
-//        http://127.0.0.1:65289/css/upload-theme.css
     });
   }, false);
 
